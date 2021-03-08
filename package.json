@@ -1,0 +1,34 @@
+{
+  "name": "onecss",
+  "version": "1.0.0",
+  "description": "No bullshit CSS helpers, resets & utilities focused on simplicity.",
+  "main": "css/one.css",
+  "scripts": {
+    "build": "yarn run build-sass && yarn run minify",
+    "build-sass": "node-sass --output-style expanded --source-map true scss/one.scss css/one.css",
+    "minify": "postcss css/one.css -u cssnano -o css/one.min.css --no-map"
+  },
+  "repository": "git+https://github.com/hachi-studio/onecss",
+  "keywords": [
+    "simple",
+    "css",
+    "css-framework",
+    "css-variables",
+    "minimal",
+    "darkmode"
+  ],
+  "author": "Hachi (https://hachi.studio)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hachi-studio/onecssissues"
+  },
+  "homepage": "https://github.com/hachi-studio/onecss#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^7.1.1"
+  },
+  "private": false,
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
